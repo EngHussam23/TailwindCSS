@@ -1,14 +1,11 @@
 // import TabsBar from "./Components/TabsBar";
 // import NavBar from "./Layout/NavBar";
-import ToDoList from "./Pages/TodoList";
+import HomePage from "./Pages/Home";
 
 function App() {
   return (
     <>
-      {/* <TabsBar />
-      <NavBar /> */}
-
-      <ToDoList />
+      <HomePage />
     </>
   );
 }
