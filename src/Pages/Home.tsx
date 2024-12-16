@@ -1,5 +1,5 @@
-import ToDoSection from "../Components/ToDo/ToDoSection";
-import ToDoNav from "../Layout/TodoNav";
+import ToDoSection from "../Components/ToDoListComponents/ToDoList";
+import ToDoNav from "../Layout/NavBar";
 
 const TodoList = () => {
   return (
