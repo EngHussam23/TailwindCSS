@@ -6,8 +6,6 @@ type MenuItemProps = {
   NotificationsCount?: number;
 };
 
-//React.MouseEventHandler<HTMLElement>
-
 const MenuItem = ({ Icon, Name, NotificationsCount = 0 }: MenuItemProps) => {
   const [SelectedItem, setSelectedItem] = useState(false);
 
@@ -28,8 +26,14 @@ const MenuItem = ({ Icon, Name, NotificationsCount = 0 }: MenuItemProps) => {
         {Icon}
         <p>{Name}</p>
       </div>
-      <p className="py-1 px-2 rounded-md -bg--Primary-700">
-        {NotificationsCount}
+      <p
+        className={
+          NotificationsCount === 0
+            ? ""
+            : "py-1 px-2 rounded-md -bg--Primary-700"
+        }
+      >
+        {NotificationsCount === 0 ? "" : NotificationsCount}
       </p>
     </div>
   );
