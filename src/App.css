@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+.Button404 {
+  padding: 12px 32px;
+  background: var(000);
+}
+
 /*Flash Cards Counter Styles: {Saved, Default, Learning}*/
 
 .SavedCount:hover {

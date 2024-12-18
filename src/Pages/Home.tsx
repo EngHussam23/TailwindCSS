@@ -1,11 +1,11 @@
-import ToDoSection from "../Components/ToDoListComponents/ToDoList";
-import ToDoNav from "../Layout/NavBar";
+import { Outlet } from "react-router-dom";
+import TodoNav from "../Layout/NavBar";
 
 const TodoList = () => {
   return (
     <div className="flex items-center h-screen w-full">
-      <ToDoNav />
-      <ToDoSection />
+      <TodoNav />
+      <Outlet />
     </div>
   );
 };

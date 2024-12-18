@@ -20,6 +20,7 @@ const TodoNav = () => {
       </section>
       <MenuItem
         Icon={<Grid color="#6993C7" size={24} />}
+        to="/CommingSoon"
         Name="Setting"
         NotificationsCount={2}
       />
@@ -33,6 +34,7 @@ const DefaultToDoListsMap = [
     item: (
       <MenuItem
         Icon={<ClipboardList color="#6993C7" size={24} />}
+        to="/"
         Name="Home"
         NotificationsCount={3}
       />
@@ -43,6 +45,7 @@ const DefaultToDoListsMap = [
     item: (
       <MenuItem
         Icon={<Star color="#6993C7" size={24} />}
+        to="/Important"
         Name="Important"
         NotificationsCount={1}
       />
@@ -53,6 +56,7 @@ const DefaultToDoListsMap = [
     item: (
       <MenuItem
         Icon={<Check color="#6993C7" size={24} />}
+        to="/Completed"
         Name="Completed"
         NotificationsCount={12}
       />
@@ -66,6 +70,7 @@ const CustomToDoListsMap = [
     item: (
       <MenuItem
         Icon={<ClipboardList color="#6993C7" size={24} />}
+        to="/CommingSoon"
         Name="Custom List 1"
         NotificationsCount={2}
       />
@@ -76,6 +81,7 @@ const CustomToDoListsMap = [
     item: (
       <MenuItem
         Icon={<ClipboardList color="#6993C7" size={24} />}
+        to="/CommingSoon"
         Name="Custom List 2"
         NotificationsCount={1}
       />

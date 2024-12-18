@@ -1,26 +1,26 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 type MenuItemProps = {
   Icon: JSX.Element;
   Name: string;
   NotificationsCount?: number;
+  to: string;
 };
 
-const MenuItem = ({ Icon, Name, NotificationsCount = 0 }: MenuItemProps) => {
-  const [SelectedItem, setSelectedItem] = useState(false);
-
+const MenuItem = ({
+  Icon,
+  Name,
+  NotificationsCount = 0,
+  to,
+}: MenuItemProps) => {
   return (
-    <div
-      className={
-        SelectedItem === true
+    <NavLink
+      to={to}
+      className={({ isActive }) => {
+        return isActive
           ? "flex gap-2 hover:cursor-pointer hover:-bg--Primary-700 px-2 py-1 rounded-lg -bg--Primary-600 items-center justify-between"
-          : "flex gap-2 hover:cursor-pointer px-2 py-1 items-center hover:-bg--Primary-800 rounded-lg justify-between"
-      }
-      onClick={
-        SelectedItem === true
-          ? () => setSelectedItem(false)
-          : () => setSelectedItem(true)
-      }
+          : "flex gap-2 hover:cursor-pointer px-2 py-1 items-center hover:-bg--Primary-800 rounded-lg justify-between";
+      }}
     >
       <div className="flex gap-2 items-center">
         {Icon}
@@ -35,7 +35,7 @@ const MenuItem = ({ Icon, Name, NotificationsCount = 0 }: MenuItemProps) => {
       >
         {NotificationsCount === 0 ? "" : NotificationsCount}
       </p>
-    </div>
+    </NavLink>
   );
 };
 
