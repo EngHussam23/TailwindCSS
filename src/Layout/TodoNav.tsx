@@ -9,7 +9,8 @@ const TodoNav = () => {
     <nav className="flex flex-col justify-between h-screen p-6 w-max -bg--Primary-950 -text--Primary-50">
       <section className="flex flex-col gap-8">
         {/* Logo */}
-        <img src="src/assets/Todo2.0Dark.png" alt="Logo" className="w-24" />
+        <img src="src\assets\Checklist-Logo.svg" alt="Logo" className="w-24" />
+        {/* <svg clipPath="/src/assets/Checklist-Logo.svg" /> */}
         {/*Search Bar*/}
         <div className="flex items-center pr-2 gap-2 border overflow-hidden -border--Neutral-600 rounded-lg hover:-border--Neutral-100">
           <input
