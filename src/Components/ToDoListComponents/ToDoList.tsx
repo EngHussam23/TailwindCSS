@@ -9,9 +9,9 @@ const ToDoSection = () => {
       <section className="flex flex-col w-full gap-3">
         <h1 className="font-semibold text-4xl p-2">My Day</h1>
         <div className="flex flex-col gap-4">
-          <ToDoTask TaskTitle="Task 1" IsImportant={false} />
-          <ToDoTask TaskTitle="Test 2" IsImportant={false} />
-          <ToDoTask TaskTitle="Test 3" IsImportant={false} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={false} />
+          <ToDoTask TaskTitle="Test 2" Important={false} Stroke={false} />
+          <ToDoTask TaskTitle="Test 3" Important={false} Stroke={false} />
         </div>
       </section>
       {/* Add Task Input Field*/}

@@ -7,67 +7,19 @@ const Completed = () => {
       {/*Tasks Section*/}
       <section className="flex flex-col w-full gap-3 overflow-hidden">
         <h1 className="font-semibold text-4xl p-2">Completed</h1>
-        <div className="flex flex-col gap-4 overflow-auto">
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
+        <div className="flex flex-col gap-4 overflow-y-scroll overflow-x-hidden">
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={true} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={true} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={true} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
+          <ToDoTask TaskTitle="Task 1" Important={false} Stroke={true} />
         </div>
       </section>
     </section>

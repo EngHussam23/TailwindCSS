@@ -9,11 +9,7 @@ const Important = () => {
       <section className="flex flex-col w-full gap-3">
         <h1 className="font-semibold text-4xl p-2">Important</h1>
         <div className="flex flex-col gap-4">
-          <ToDoTask
-            TaskTitle="Task 1"
-            Important={true}
-            setImportant={() => true}
-          />
+          <ToDoTask TaskTitle="Task 1" Important={true} Stroke={false} />
         </div>
       </section>
       {/* Add Task Input Field*/}

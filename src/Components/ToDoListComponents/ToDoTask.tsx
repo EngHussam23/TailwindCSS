@@ -1,23 +1,24 @@
 import { useState } from "react";
-import { Dispatch, SetStateAction } from "react";
 
 import Star from "../../assets/Icons/Star";
 
 type TaskProps = {
   TaskTitle: string;
   Important: boolean;
-  setImportant?: Dispatch<SetStateAction<boolean>>;
+  Stroke: boolean;
 };
 
-const ToDoTask = ({ TaskTitle, Important, setImportant }: TaskProps) => {
-  [Important, setImportant] = useState(false);
-  const [Stroke, setStroke] = useState(false);
+const ToDoTask = ({ TaskTitle, Important, Stroke }: TaskProps) => {
+  let setImportant;
+  let setStroke;
+  [Important, setImportant] = useState(Important);
+  [Stroke, setStroke] = useState(Stroke);
   return (
-    <label
+    <div
       className={
         Important === true
-          ? "flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-900 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md"
-          : "flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-600 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md"
+          ? "flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-950 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md"
+          : "flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-500 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md"
       }
     >
       <span
@@ -31,9 +32,7 @@ const ToDoTask = ({ TaskTitle, Important, setImportant }: TaskProps) => {
           type="radio"
           title="radio"
           className="w-6 h-6 border rounded-md appearance-none"
-          onClick={
-            Stroke === true ? () => setStroke(false) : () => setStroke(true)
-          }
+          onClick={() => setStroke(!Stroke)}
         />
         {TaskTitle}
       </span>
@@ -41,30 +40,10 @@ const ToDoTask = ({ TaskTitle, Important, setImportant }: TaskProps) => {
         color={Important === true ? "#FACA15" : "#A4B4BC"}
         size={24}
         className="hover:cursor-pointer"
-        onClick={
-          Important === true
-            ? () => setImportant(false)
-            : () => setImportant(true)
-        }
+        onClick={() => setImportant(!Important)}
       />
-    </label>
+    </div>
   );
 };
 
 export default ToDoTask;
-
-/*
-
-<label className="flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-600 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md">
-            <span className="flex items-center gap-3">
-              <input
-                type="radio"
-                title="radio"
-                className="w-6 h-6 border rounded-md appearance-none"
-              />
-              Build a ToDo list project
-            </span>
-            <Star color="#ffffff" size={24} className="" />
-          </label>
-
-*/
