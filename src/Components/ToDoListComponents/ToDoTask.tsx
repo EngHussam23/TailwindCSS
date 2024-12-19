@@ -6,17 +6,24 @@ type TaskProps = {
   TaskTitle: string;
   Important: boolean;
   Stroke: boolean;
+  RemoveTask: () => void;
 };
 
-const ToDoTask = ({ TaskTitle, Important, Stroke }: TaskProps) => {
+const ToDoTask = ({ TaskTitle, Important, Stroke, RemoveTask }: TaskProps) => {
   let setImportant;
   let setStroke;
   [Important, setImportant] = useState(Important);
   [Stroke, setStroke] = useState(Stroke);
   return (
     <div
-      className={`flex items-center justify-between p-4 -text--Primary-50 ${Important ? "-bg--Neutral-950" : "-bg--Neutral-500"} bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md transition-all`}
+      className={`flex items-center justify-between p-4 -text--Primary-50 ${Important ? "-bg--Neutral-950" : "-bg--Neutral-500"} bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md transition-all relative ToDoTask`}
     >
+      <div
+        className="flex items-center justify-center absolute -bg--Primary-900 px-3 py-1 rounded-t-lg left-1/3 right-1/3 bottom-full cursor-pointer RemoveTask"
+        onClick={RemoveTask}
+      >
+        Remove
+      </div>
       <span
         className={`flex items-center gap-3 ${Stroke ? "line-through" : ""}`}
       >

@@ -36,7 +36,7 @@ const DefaultToDoListsMap = [
         Icon={<ClipboardList color="#6993C7" size={24} />}
         to="/"
         Name="Home"
-        NotificationsCount={3}
+        NotificationsCount={7}
       />
     ),
   },
@@ -47,7 +47,7 @@ const DefaultToDoListsMap = [
         Icon={<Star color="#6993C7" size={24} />}
         to="/Important"
         Name="Important"
-        NotificationsCount={1}
+        NotificationsCount={5}
       />
     ),
   },
