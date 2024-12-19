@@ -15,23 +15,17 @@ const ToDoTask = ({ TaskTitle, Important, Stroke }: TaskProps) => {
   [Stroke, setStroke] = useState(Stroke);
   return (
     <div
-      className={
-        Important === true
-          ? "flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-950 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md"
-          : "flex items-center justify-between p-4 -text--Primary-50 -bg--Neutral-500 bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md"
-      }
+      className={`flex items-center justify-between p-4 -text--Primary-50 ${Important ? "-bg--Neutral-950" : "-bg--Neutral-500"} bg-opacity-75 hover:-bg--Primary-900 hover:-text--Primary-50 rounded-md transition-all`}
     >
       <span
-        className={
-          Stroke === true
-            ? "flex items-center gap-3 line-through"
-            : "flex items-center gap-3"
-        }
+        className={`flex items-center gap-3 ${Stroke ? "line-through" : ""}`}
       >
         <input
-          type="radio"
-          title="radio"
-          className="w-6 h-6 border rounded-md appearance-none"
+          type="checkbox"
+          title="Checkbox"
+          id={`${TaskTitle}Checkbox`}
+          className="peer w-6 h-6 rounded-md -accent--Primary-950"
+          checked={Stroke}
           onClick={() => setStroke(!Stroke)}
         />
         {TaskTitle}
